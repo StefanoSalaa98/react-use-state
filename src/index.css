@@ -1,0 +1,11 @@
+.title {
+  text-align: center;
+}
+
+.description {
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 90%;
+  border: 1px solid black;
+  height: 200px;
+}
