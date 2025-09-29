@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 import Language from "./language";
 // import Description from "./Description";
 
@@ -36,17 +38,21 @@ const MyMain = () => {
         }
     ];
 
+    // variabile di stato della lista
+    const [activeLanguage, setActiveLanguage] = useState(null);
+
     return (
 
         <>
             {languages.map((language) => (
                 <Language
-                    id={language.id}
                     title={language.title}
                     description={language.description}
+                    isSelect={activeLanguage === language.id}
+                    onToggle={() => setActiveLanguage(activeLanguage === language.id ? null : language.id)}
+                    id={language.id}
                 />
             ))}
-            <div class="description"></div>
         </>
 
     )
