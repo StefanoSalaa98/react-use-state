@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const Language = (props) => {
 
-    const { title, description, isSelect, onToggle, id } = props
+    const { title, description, isSelect, onToggle, onDescription, id } = props
 
     // variabile di stato del bottone
     // const [isSelect, setIsSelect] = useState(false);
@@ -16,7 +16,7 @@ const Language = (props) => {
                 {title}
                 {console.log({ id }, { isSelect })}
             </button>
-            {isSelect && <div className="description">{description}</div>}
+            {/* {isSelect && <div className="description">{description}</div>} */}
         </>
 
     )

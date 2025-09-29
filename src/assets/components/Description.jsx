@@ -1,8 +1,13 @@
-const Description () => {
+const Description = (props) => {
+
+    const { active, id, description } = props
+
+    const check = active === id
 
     return (
 
-        <div class="descrizione"></div>
+        check && <div className="description">{description}</div>
+
     )
 
 }
