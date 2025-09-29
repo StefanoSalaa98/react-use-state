@@ -53,18 +53,22 @@ const MyMain = () => {
     return (
 
         <>
+            <div className="button-container">
+                {languages.map((language) => (
+                    <>
+                        <Language
+                            title={language.title}
+                            description={language.description}
+                            isSelect={activeLanguage === language.id}
+                            onToggle={() => setActiveLanguage(activeLanguage === language.id ? null : language.id)}
+                            id={language.id}
+                        />
+                    </>
+                ))}
+            </div>
+            {/* scorro di nuovo l'array e passo al figlio*/}
             {languages.map((language) => (
-                <>
-                    <Language
-                        title={language.title}
-                        description={language.description}
-                        isSelect={activeLanguage === language.id}
-                        onToggle={() => setActiveLanguage(activeLanguage === language.id ? null : language.id)}
-                        id={language.id}
-                    />
-                </>
-            ))}
-            {languages.map((language) => (
+
                 <Description
                     active={activeLanguage}
                     id={language.id}

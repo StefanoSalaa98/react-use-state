@@ -9,7 +9,7 @@ const Language = (props) => {
 
     return (
         <>
-            <button
+            <button className="bottone"
                 key={id}
                 onClick={onToggle}
             >

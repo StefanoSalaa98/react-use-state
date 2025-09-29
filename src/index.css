@@ -9,3 +9,21 @@
   border: 1px solid black;
   height: 200px;
 }
+
+.button-container {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bottone {
+  padding: 10px 20px;
+  margin: 10px 30px;
+  font-size: 1.5rem;
+  background-color: blue;
+  color: white;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
