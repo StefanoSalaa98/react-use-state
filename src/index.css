@@ -8,6 +8,10 @@
   width: 90%;
   border: 1px solid black;
   height: 200px;
+  font-size: 1.5rem;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .button-container {

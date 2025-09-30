@@ -1,13 +1,10 @@
 const Description = (props) => {
 
-    const { active, id, description } = props
-
-    // controllo se l'identificativo del bottone corrisponde a quello selezionato
-    const check = active === id
+    const { description } = props
 
     return (
 
-        check && <div className="description">{description}</div>
+        <div className="description">{description}</div>
 
     )
 

@@ -41,15 +41,6 @@ const MyMain = () => {
     // variabile di stato della lista
     const [activeLanguage, setActiveLanguage] = useState(null);
 
-    // function App() {
-    //     const [activeDescription, setActiveDescription] = useState(null);
-
-    //     const activeDescription = (lingua) => {
-    //         setActiveDescription(lingua);
-
-    //     }
-    // };
-
     return (
 
         <>
@@ -58,23 +49,28 @@ const MyMain = () => {
                     <>
                         <Language
                             title={language.title}
-                            description={language.description}
-                            isSelect={activeLanguage === language.id}
-                            onToggle={() => setActiveLanguage(activeLanguage === language.id ? null : language.id)}
+                            // variabile che indica se il bottone è selezionato oppure no
+                            isSelect={activeLanguage?.id === language.id}
+                            // funzione che assegna ad ActiveLanguage l'oggetto language se il bottone è stato premuto per la prima volta, e assegna un oggetto vuoto se è stato premuto per la seconda volta
+                            onToggle={() => setActiveLanguage(activeLanguage?.id === language.id ? {} : language)}
                             id={language.id}
                         />
                     </>
                 ))}
             </div>
-            {/* scorro di nuovo l'array e passo al figlio*/}
-            {languages.map((language) => (
 
+            {/* se activeLanguage.title ha un valore, passo la descrizione del linguaggio al figlio Description, altrimenti passo al figlio la stringa "Nessun linguaggio selezionato" */}
+            {/* {activeLanguage?.title ? (
                 <Description
-                    active={activeLanguage}
-                    id={language.id}
-                    description={language.description}
+                    description={activeLanguage.description}
                 />
-            ))}
+            )
+                : <Description
+                    description="Nessun linguaggio selezionato"
+
+                />
+            } */}
+
         </>
 
     )
