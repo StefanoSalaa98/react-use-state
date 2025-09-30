@@ -59,8 +59,8 @@ const MyMain = () => {
                 ))}
             </div>
 
-            {/* se activeLanguage.title ha un valore, passo la descrizione del linguaggio al figlio Description, altrimenti passo al figlio la stringa "Nessun linguaggio selezionato" */}
-            {/* {activeLanguage?.title ? (
+            {/* se activeLanguage.title ha un valore, passo la descrizione del linguaggio al figlio Description, altrimenti passo al figlio la stringa "Nessun linguaggio selezionato"  */}
+            {activeLanguage?.title ? (
                 <Description
                     description={activeLanguage.description}
                 />
@@ -69,7 +69,7 @@ const MyMain = () => {
                     description="Nessun linguaggio selezionato"
 
                 />
-            } */}
+            }
 
         </>
 
