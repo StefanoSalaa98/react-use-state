@@ -2,14 +2,14 @@ import { useState } from "react";
 
 const Language = (props) => {
 
-    const { title, description, isSelect, onToggle, onDescription, id } = props
+    const { title, description, isSelect, onToggle, id } = props
 
     // variabile di stato del bottone
     // const [isSelect, setIsSelect] = useState(false);
 
     return (
         <>
-            <button className="bottone"
+            <button className={` bottone ${isSelect && "bg-yellow"}`}
                 key={id}
                 onClick={onToggle}
             >
