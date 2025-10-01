@@ -41,6 +41,8 @@ const MyMain = () => {
     // variabile di stato della lista
     const [activeLanguage, setActiveLanguage] = useState(null);
 
+    const check = activeLanguage?.title ? activeLanguage.description : "Nessun linguaggio selezionato"
+
     return (
 
         <>
@@ -59,17 +61,9 @@ const MyMain = () => {
                 ))}
             </div>
 
-            {/* se activeLanguage.title ha un valore, passo la descrizione del linguaggio al figlio Description, altrimenti passo al figlio la stringa "Nessun linguaggio selezionato"  */}
-            {activeLanguage?.title ? (
-                <Description
-                    description={activeLanguage.description}
-                />
-            )
-                : <Description
-                    description="Nessun linguaggio selezionato"
-
-                />
-            }
+            <Description
+                description={check}
+            />
 
         </>
 
